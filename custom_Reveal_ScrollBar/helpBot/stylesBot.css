@@ -1,0 +1,163 @@
+body {
+	width: 100%;
+	height: 100vh;
+	margin: 0px;
+}
+.row {
+  display: flex;
+  height: 100vh;
+}
+
+.column {
+  float: left;
+}
+
+.left {
+  width: 70%;
+}
+
+.right {
+  width: 30%;
+}
+#chatBot{
+	width: 99%;
+	height: 90%;
+	padding-left: 1%;
+	overflow: auto;
+}
+#inputUser{
+	height: 10%;
+	width: 70%;
+	background: white;
+	z-index: 1;
+	position: fixed;
+}
+#inputUser input{
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width :90%;
+  margin-top: 8px;
+}
+/* Control the left side */
+.leftsplit {
+  left: 0;
+}
+
+/* Control the right side */
+.rightsplit {
+  left: 50%;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  height: 10%;
+  width:90%;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+#open-button {
+  background: url(../images/Spectre.jpg) center no-repeat;
+  background-size: 50px 50px;
+  color: black;
+  padding: 0px 0px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  border-radius: 50%;
+  top:5%;
+}
+#open-button p{
+	margin-left: 80px;
+}
+
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  position: absolute;
+  margin-left: 150px;
+  margin-top: -50px;
+  width: 220%;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: white;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  color: white;
+}
+#myLinks{
+	border: solid 1px black;
+    margin-left: -15%;
+    margin-top: 2%;
+    position: fixed;
+    width: 25%;
+}

@@ -1,0 +1,828 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif;
+
+}
+
+body {
+  background-color:rgba(27,31,64);
+}
+
+.topimgarticle{
+  width: 85%;
+  position: center;
+
+}
+
+.ul{
+  list-style-type: none;
+  overflow: hidden;
+  background-color: rgba(27,31,64);
+  width: 100%;
+  border-bottom : solid 3px rgba(231,140,51,0.8);
+}
+
+
+#banniere{
+  height: 350px;
+  width: 100%;
+  display: block;
+  border-bottom : solid 3px rgba(231,140,51,0.8);
+}
+
+header{
+  height: 400px;
+}
+
+
+.nav{
+  background-color: rgb(17,20,43);
+  padding-right: 0px;
+}
+
+
+
+#scroll{
+  position: fixed;
+  width: 23%;
+  margin-left: 0.2%;
+}
+li.menu, li.menu-different{
+  float: left;
+  width: 14%;
+}
+
+li p{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-style: 
+}
+
+li.menu-different{
+  
+}
+
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+
+.menu a:hover{
+  background-color: rgba(231,140,51,0.8);
+  transition: all 0.8s ease;
+
+}
+
+
+.disparaits
+{
+  display: none;
+}
+
+li a.connecter{
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgba(231,140,51,0.8);
+  border-radius: 10px;
+  margin: 10px;
+  margin-left: 25px;
+  padding: 5px;
+}
+/*
+li a.connecter:hover{
+  background-color: white;
+  color: rgba(231,140,51,0.8);
+  border: solid 4px rgba(231,140,51,0.8);
+}*/
+
+
+#imgmenu,#imgmenu2,#logos,#logo2,#logos2{
+  display: none;
+}
+
+.menugauche:hover {
+  background-color: rgba(231,140,51,0.8);
+  transition: all 0.8s ease;
+}
+
+@media screen and (max-width: 1030px)
+{
+  .topimgarticle{
+  width: 95%;
+  position: center;
+}
+  #slideshow {
+    background-color: rgb(27,31,64);
+    z-index: -1;
+  }
+
+  #logos {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    height: 40px;
+  }
+  #logo2{
+    display: block;
+    position: absolute;
+    z-index: 1;
+  }
+
+  #imgmenu {
+    display:block;
+    right: 0px;
+    z-index: 1;
+    position: absolute;
+    background-color: rgb(27,31,64);
+  }
+
+  li.menu,li.menu-different{
+    float: none;
+    width: 100%;
+  }
+
+
+
+  #afficher{
+    display: none;
+  }
+  #banniere{
+    height: 200px;
+    width: 100%;
+  }
+
+  #phone {
+  }
+
+  #imgmenu:hover + #afficher{
+    display: block;
+  }
+
+  #afficher:hover {
+    display: block;
+  }
+
+  #banniere {
+    position: absolute;
+    right: 0px;
+    top: 35px;
+    z-index: -1;
+  }
+
+  header{
+    height: 230px;
+  }
+
+  #afficher li a {
+    padding: 5px;
+  }
+
+  #logos2 {
+    display: block;
+    background-color: rgb(27,31,64);
+  }
+
+  #imgmenu2 {
+    display:block;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+    position: absolute;
+    width: 48px;
+  }
+
+  #imgmenu2:hover + #afficher{
+    display: block;
+  }
+
+  #enlever {
+    display: none;
+  }
+
+  .disparaits{
+  display: block;
+  }
+
+  #mvp {
+    width: 180px;
+    margin: 20px auto 0 auto;
+    border: solid 2px rgba(231,140,51,0.8);
+    border-radius: 10px;
+    padding: 10px;
+}
+  
+}
+
+#blocc{
+  display: none;
+}
+
+@media screen and (max-width: 925px) {
+
+#bloc{
+  display: none;
+}
+
+.texteallD {
+  display: block;
+}
+
+
+#blocc{
+  display: block;
+  list-style: none;
+}
+}
+
+@media screen and (min-width: 1030px)
+{
+  #mvp {
+    width: 180px;
+    margin: 20px auto 0 auto;
+    border: solid 2px rgba(231,140,51,0.8);
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    float: right;
+}
+
+  
+}
+
+
+.menu-different {
+  background-image: url("../Image/essailogo2.png");
+  background-image : no-repeat;
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+section nav{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: rgba(128,128,128,0.5);
+  padding: 20px;
+  /*border-right: solid 20px rgb(17,20,43);*/
+}
+
+section nav ul{
+  list-style-type: none;
+}
+
+article{
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: rgb(27,31,64);
+  border: solid 20px rgb(17,20,43);
+  padding: 10px;
+  color: white;
+  margin-right: 2px;
+}
+
+
+
+#slideshow{
+  position: relative;
+  width: 100%;
+  height: 365px;
+  overflow: hidden;
+}
+
+#sContent li{
+  display: inline;
+}
+
+#sContent{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  margin: 0;            
+  padding: 0;
+  animation-name: slideauto;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slideauto{
+  0% {
+    left: 0px; /*1ère image*/
+  }
+  15% {
+    left: 0px; /*attente*/
+  }
+  35% {
+    left: -100%; /*2ème image*/
+  }
+  50% {
+    left: -100%; /*attente*/
+  }
+  70% {
+    left: -200%; /*3ème image*/
+  }
+  85% {
+    left: -200%; /*attente*/
+  }
+  100% {
+    left: 0px; /*1ère image*/
+  }
+}
+
+ul.Objectifs{
+  margin: 0 auto;
+  text-align: center;
+  list-style: none;
+  overflow: hidden;
+  background-color: rgba(231,140,51,0.8);
+  width: 70%;
+  border-left : solid 3px rgba(231,140,51,0.8);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.lien:link, .lien:visited {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.lien:hover {
+  color: rgb(27,31,64);
+}
+
+img.info{
+  float:left;
+  width:30px;
+  height:30px;
+  position: relative;
+}
+/* yolo */
+
+#logo{
+  margin: 3px;
+  margin-top: 3.5%;
+  width: 90%;
+  height: 36px;
+}
+
+/* Au sujet des articles */
+
+#titrearticles{
+  text-align: center;
+  font-size: 25px;
+  border-bottom: solid 3px rgba(231,140,51,0.8);
+  margin-bottom: 20px;
+}
+
+#introductiontxt{
+  margin: 10px;
+  text-align: justify;
+}
+
+#titreintermediaire , #titrepartie{
+  width: 400px;
+  margin: 30px auto 20px auto;
+  text-align: center;
+  border-bottom: solid 1px rgba(231,140,51,0.8);
+}
+
+#texteall , #textall , #introductiontxt {
+  margin: 10px;
+  text-align: justify;
+  border-left: solid 1px rgba(231,140,51,0.9); 
+  padding-left: 5px;
+}
+
+/*#titrepartie{
+  margin: 20px;
+  text-transform: bold;
+}*/
+
+#soustitrepartie{
+  margin: 25px;
+  text-decoration: underline rgba(231,140,51,0.9);
+}
+
+#gif {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
+
+#gif p {
+  margin-bottom: 30px;
+}
+
+#gif p img {
+  width: 600px;
+  height: 350px;
+  margin-top: 10px;
+}
+
+.controleSubTxt {
+  font-size: 17px;
+  font-weight: bold;
+  color:rgba(231,140,51,0.8);
+}
+
+.form-group {
+  margin: 10px;
+}
+
+.form-group label{
+  /*text-align: center;
+  padding: 5px;
+  /*width:50%;*/
+  float: left;
+  text-align:left;
+  width: 220px;
+  padding-left: 5px;
+}
+
+#form-connect{
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#form-account {
+  width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#form-account div {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#changer_mdp{
+  margin-top: 10px ; 
+  text-align: center;
+}
+
+[class*="alert-succes"] {
+  background-color: #33BC49;
+  border-radius: 10px;
+  padding: 10px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.alert-danger {
+  background-color: #F53838;
+  width: 380px;
+  padding: 10px;
+  border-radius:10px; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.alert-danger ul {
+  list-style-type: none;
+  padding-left: 5%; 
+}
+
+
+
+h1{
+  text-align: center;
+}
+
+
+/*Debut d'ecrire les exemples en mode sublime text*/
+
+#tableau {
+  background-color: #282923;
+  color: white;
+}
+
+
+.chiffre {
+  padding-left: 2px;
+  padding-right: 10px;
+  border-right: 2px solid #000254;
+   -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.code {
+  padding-left: 10px;
+}
+
+.rouge {
+  color: #F9245E;
+}
+
+.vert {
+  color: #A6E22B;
+}
+
+.orange {
+  color: #E7DB74;
+}
+
+.gris {
+  color: #74704E;
+}
+
+.bleu {
+  color: #60D8DA;
+}
+
+.violette {
+  color: #AC80FF;
+}
+
+.tabulation {
+  margin-left: 10px;
+}
+
+
+/*fin d'ecrire les exemples en mode sublime text*/
+
+
+
+/*-----------------------DEBUT-QCM----------------------------*/
+
+/*Modifie le style des "boites" contenant les questions et les réponses possible*/
+#questionnaire .question {
+  border: outset 3px rgba(231,140,51,0.8);
+  padding: 20px;
+  width: 400px;
+  margin:10px 0px 10px 0px;
+  background-color: rgb(17,20,43);
+  border-radius: 10px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#questionnaire input {
+  margin: 5px 10px 0px 0px;
+}
+
+/*Apparance quand faute*/
+.echec {
+  background-color: #F53838;
+  border: solid 3px #F53838;
+  padding:5px 20px 5px 20px;
+  width: 30%;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+/*Apparance quand réponse correct*/
+.reussite {
+  background-color: #33BC49;
+  border: solid 3px #33BC49;
+  padding:5px 20px 5px 20px;
+  width: 30%;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+/*--------MODIFICATION DU BOUTON SUBMIT--------------*/
+
+input[type=submit], button {
+  margin: 20px 0px 10px 0px;
+  padding: 10px;
+  width: 200px;
+  color:white;
+  font-size: 16px;
+  background-color: rgb(17,20,43);
+  border: solid 1px rgb(17,20,43);
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+input[type=submit]:hover, button:hover {
+  background-color:rgba(231,140,51,0.8);
+  border: solid 1px rgba(231,140,51,0.8);
+}
+
+/*--------------DEBUT_APPARANCE_BOUTTONS-RADIOS-------------*/
+.css-radio
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  background-color: white;
+  color: #666;
+  top: 3px;
+  height: 16px;
+  width: 16px;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;     
+  margin-right: 7px;
+  outline: none;
+  transition: all 0.5s ease;
+}
+.css-radio:checked::before
+{
+  position: absolute;
+  left: 5px;
+  top: -1px;
+  content: '\02143'; /*Affiche un caractère spécial*/
+  transform: rotate(40deg); /*fait une rotation du caractère poour l'effet coché*/
+  color: black;
+}
+.css-radio:hover
+{
+  background-color: rgba(231,140,51,0.8);
+}
+.css-radio:checked
+{
+  background-color: rgba(231,140,51,0.8);
+}
+/*--------------FIN_APPARANCE_BOUTTONS-RADIOS-------------*/
+
+/*--------------DEBUT_APPARANCE_CHECKBOX-------------*/
+.css-checkbox
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  background-color: white;
+  color: #666;
+  top: 3px;
+  height: 16px;
+  width: 16px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;     
+  margin-right: 7px;
+  outline: none;
+  transition: all 0.5s ease;
+}
+.css-checkbox:checked::before
+{
+  position: absolute;
+  left: 5px;
+  top: -1px;
+  content: '\02143'; /*Affiche un caractère spécial*/
+  transform: rotate(40deg); /*fait une rotation du caractère poour l'effet coché*/
+  color: black;
+}
+.css-checkbox:hover
+{
+  background-color: rgba(231,140,51,0.8);
+}
+.css-checkbox:checked
+{
+  background-color: rgba(231,140,51,0.8);
+}
+/*--------------FIN_APPARANCE_CHECKBOX-------------*/
+
+/*--------------DEBUT_APPARANCE_INPUT_TEXT-------------*/
+
+input[type=text] , input[type=password] {
+  padding: 5px;
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+input[type=text]:hover , input[type=password]:hover {
+  background-color: rgba(231,140,51,0.8);
+  color: white;
+}
+
+input[type=text]:focus , input[type=password]:focus {
+  background-color: rgba(231,140,51,0.8);
+  color: white;
+}
+
+/*--------------FIN_APPARANCE_INPUT_TEXT-------------*/
+
+/*-----------------------FIN-QCM----------------------------*/
+
+/*--------------------Début du footer--------------------*/
+
+footer{
+  background-color: rgba(27,31,64);
+  padding: 50px;
+  color: rgba(231,140,51,0.8);
+}
+/*-----Taille titre 1-----*/
+footer h4{
+  font-size: 20px;
+}
+footer nav ul{
+  list-style-type: square;
+  margin-left: 2%;
+}
+/*-----Couleur logo réseau sociaux-----*/
+.fa{
+  color: white;
+}
+/*-----Parametre instagram-----*/
+.insta {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 50px;
+  line-height: 60px;
+/*-----C est pour les nuance de couleur d'instagram-----*/
+  background: radial-gradient(circle at 30% 107%, 
+    #fdf497 0%, 
+    #fdf497 5%, 
+    #fd5949 45%,
+    #d6249f 60%,
+    #285AEB 90%);
+}
+/*-----Parametre facebook-----*/
+.fb{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 50px;
+  line-height: 60px;
+
+  background: #3b5998;
+}
+/*-----Enlève la ligne sous les logo-----*/
+
+/*-----Copyright au centre-----*/
+.copyright{
+  display: block;
+  text-align: center;
+}
+/*-----Lorsque la largeur de la fentre est en dessous de 500px,
+enlève les noms du groupe et mets les réseau sociaux à gauche-----*/
+@media screen and (max-width: 950px)
+{
+  footer h4{display: none;}
+  footer nav ul{display: none;}
+  .reseau{display: none;}
+}
+
+
+/*-----Mets le logo au centre-----*/
+/*.img{
+  margin-left: 50%;
+  transform:translateX(-50%);
+  }*/
+.img {
+  text-align: center;
+}
+#groupe{
+  display: inline-block;
+}
+/*-----Enlève la ligne sous les logo-----*/
+a:link{
+  text-decoration: none;
+}
+.gauche{
+  float: left;
+}
+.droite{
+  float: right;
+}

@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+
+body , html {
+    font-family: 'Cabin', sans-serif;
+    background-color: aqua;
+    margin: 0;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+header {
+    padding: 2em;
+    .logo{
+        color: black;
+        font-weight: bold;
+    }
+    .menu-btn{
+        width: 18px;
+        float: right;
+        cursor: pointer;
+    }
+}
+
+section {
+    padding: 4em;
+    h1{
+        font-size: 4em;
+        margin: 1em auto;
+        width: 70%;
+        text-transform: uppercase;
+
+        &::before{
+            content: '';
+            border-top: 6px solid black;
+            display: block;
+        }
+    }
+}
+
+nav {
+    position: absolute;
+    background:black;
+    padding: 2em;
+    width: calc(100% - 4em);
+    height: calc(100vh - 4em);
+    display: none;
+    transform: scaleX(0);
+    transform-origin: right;
+
+    .close-button {
+        width: 18px;
+        float: right;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    ul{
+        list-style-type: none;
+        margin: 10% auto 0 auto ;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        width: 80%;
+        a{
+            color: white;
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+        span {
+            color: gray;
+            display: block;
+            font-size: .75em;
+            margin-top:20px;
+
+        }
+        li{
+            opacity: 0;
+        }
+    }
+}
+
+.show-menu {
+    display: block;
+    animation: slide-menu 1s ease-in forwards;
+    .close-button {
+        animation: show-x 1s 1s forwards;
+    }
+    li:nth-of-type(1){
+        animation: menu-item-anim .6s forwards 1s ease-in-out;
+    }
+    li:nth-of-type(2){
+        animation: menu-item-anim .6s forwards 1.2s ease-in-out;
+    }
+    li:nth-of-type(3){
+        animation: menu-item-anim .6s forwards 1.6s ease-in-out;
+    }
+    li:nth-of-type(4){
+        animation: menu-item-anim .6s forwards 1.8s ease-in-out;
+    }
+
+}
+
+@keyframes slide-menu {
+    from {
+        transform:scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes show-x {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes menu-item-anim {
+    from {
+        transform: translateY(70%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;   
+    }
+}
+
+$thick : 3px;
+$pad : 0.7em;
+$extra : calc(#{$pad} * 1.2);
+$color : #f26522;
+
+
+.portfolio-experiment {
+  background: #2d2d2d;
+  
+  a {
+    color: white;
+    padding: $pad $extra;
+    display: inline-block;
+    border: $thick solid transparent;
+    position: relative;
+    font-size: 1.5em;
+    cursor: pointer;
+    letter-spacing: 0.07em;
+
+    .text {
+      // padding: 0 0.3em;
+      font-family: proxima-nova, monospace;
+      transform: translate3d(0,$pad,0);
+      display: block;
+      transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: -$thick;
+      left: $extra;
+      right: $extra;
+      height: $thick;
+      background: $color;
+      // z-index: -1;
+      transition: 
+        transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
+        right 0.2s cubic-bezier(.04,.48,0,1) 0.6s,
+        left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
+      transform-origin: left;
+    }
+
+  }
+
+  .line {
+    position: absolute;
+    background: $color;
+
+    &.-right,
+    &.-left {
+      width: $thick;
+      bottom: -$thick;
+      top: -$thick;
+      transform: scale3d(1,0,1);
+    }  
+
+    &.-top,
+    &.-bottom {
+      height: $thick;
+      left: -$thick;
+      right: -$thick;
+      transform: scale3d(0,1,1);
+    }
+
+    &.-right {
+      right: -$thick;
+      transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.23s;
+      transform-origin: top;
+    }
+
+    &.-top {
+      top: -$thick;
+      transition: transform 0.08s linear 0.43s;
+      transform-origin: left;
+    }
+
+    &.-left {
+      left: -$thick;
+      transition: transform 0.08s linear 0.51s;
+      transform-origin: bottom;
+    }
+
+    &.-bottom {
+      bottom: -$thick;
+      transition: transform 0.3s cubic-bezier(1,0,.65,1.01);
+      transform-origin: right;
+    }  
+  }
+
+  a:hover,
+  a:active {
+
+    .text {
+      transform: translate3d(0,0,0);
+      transition: transform 0.6s cubic-bezier(.2,0,0,1) 0.4s;
+    }
+
+    &:after {
+      transform: scale3d(0,1,1);
+      right: -$thick;
+      left: -$thick;
+      transform-origin: right;
+      transition: 
+        transform 0.2s cubic-bezier(1,0,.65,1.01) 0.17s,
+        right 0.2s cubic-bezier(1,0,.65,1.01),
+        left 0s 0.3s;
+    }
+
+    .line {
+      transform: scale3d(1,1,1);
+
+      &.-right {
+        transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.2s;
+        transform-origin: bottom;
+      }
+
+      &.-top {
+        transition: transform 0.08s linear 0.4s;
+        transform-origin: right;
+      }
+
+      &.-left {
+        transition: transform 0.08s linear 0.48s;
+        transform-origin: top;
+      }
+
+      &.-bottom {
+        transition: transform 0.5s cubic-bezier(0,.53,.29,1) 0.56s;
+        transform-origin: left;
+      }
+    }
+
+  }
+}

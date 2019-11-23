@@ -1,0 +1,5 @@
+balise;id/c;nom id/c;src;chemin;href;chemin2;Mettre 1 
+link;rel;stylesheet;type;text/css;href;css/style.css;1
+;;;;;;;
+img;id;imgmenu;src;../Image/menu.png;;;1
+img;class;imgmenu;src;../Image/menu.png;;;1

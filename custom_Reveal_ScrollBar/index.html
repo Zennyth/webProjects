@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet/scss" type="text/css" href="css/style.scss">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script>
+    $( document ).ready(function() {
+        document.getElementById('HomePage').style.opacity = "0";
+        document.getElementsByClassName('content')[0].style.opacity = "0";
+        document.getElementsByTagName("html")[0].style.overflowY = "hidden";
+        document.getElementById("open-button").style.opacity = "0";
+        
+        var Clock = document.getElementById('clock');
+        Clock.style.height = "400px";
+        Clock.style.width= "400px";
+        Clock.style.marginTop = "0px";
+        Clock.style.marginLeft = "0px";
+        Clock.style.left = "calc(50%)";
+        Clock.style.top = "calc(50%)";
+        Clock.style.transform = "translate(-50%, -50%)";
+        Clock.style.position = "absolute";
+        setUpMinuteHands();
+        moveSecondHands();
+        setTimeout(function(){
+            Clock.style.height = "80px";
+            Clock.style.width= "80px";
+            Clock.style.marginTop = "10px";
+            Clock.style.marginLeft = "30px";
+            Clock.style.left = "0%";
+            Clock.style.top = "0%";
+            Clock.style.transform = "translate(0%,0%)";
+            Clock.style.position = "fixed";
+
+            var i = 0.1;
+            var InterHomePage = setInterval(function(){
+                document.getElementById('HomePage').style.opacity = i;
+                document.getElementsByClassName('content')[0].style.opacity = i;
+                document.getElementById("open-button").style.opacity = i;
+                i += 0.1;
+            }, 50);
+            setTimeout(function(){
+                clearInterval(InterHomePage);
+            },1000)
+            document.getElementsByTagName("html")[0].style.overflowY = "visible";
+        }, 4000);
+
+    });
+
+ 
+    $( window ).on( "load", function() {
+    });
+    </script>
+    <script>
+      var soundID = "SoundButtonSound";
+
+      function loadSound () {
+        createjs.Sound.registerSound("sound/SoundButtonSound.wav", soundID);
+      }
+
+      function playSound (soundID) {
+        createjs.Sound.play(soundID);
+      }
+    </script>
+    <title>Mega Menu with Overlay</title>
+</head>
+<body onload="initLocalClocks();loadSound();">
+    <article Id="clock">
+                <div id="heure" class="hours-container">
+                  <div class ="rond"></div>
+                  <div class="hours">
+                    <div class="ImgHeure"></div>
+                  </div>
+                </div>
+                <div id="minute" class="minutes-container">
+                  <div class="minutes">
+                    <div class="ImgMinute"></div>
+                  </div>
+                </div>
+                <div id="seconde" class="seconds-container">
+                  <div class="seconds">
+                    <div class="ImgSeconde"></div>
+                  </div>
+                </div>
+            </article>
+    <div Id="HomePage">
+        <nav id="overlay" class="">
+            <img src="images/close-button.svg" alt="menu" class="close-button"  id="close-menu">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                    <span>Watch out, This is my site</span>
+                </li>
+
+                <li>
+                    <a href="#">About Me</a>
+                    <span>Watch out, This is my site</span>
+                </li>
+
+                <li>
+                    <a href="#">Services</a>
+                    <span>Watch out, This is my site</span>
+                </li>
+
+                <li>
+                    <a href="#">Contact</a>
+                    <span>Watch out, This is my site</span>
+                </li>
+            </ul>
+        </nav>
+        <header>
+            <img src="images/burger-menu.svg" alt="menu" class="menu-btn" id="open-menu">
+            <h1 id="title">welcome to my professional website !</h1>
+        </header>
+        <div class="containerArrow">
+            <nav-arrow class="arrow up"></nav-arrow>
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+            <nav-arrow class="arrow down"></nav-arrow>
+        </div>
+        <div data-v-1fd0ec12="" data-v-3ddcc48f="" class="soundBtn not-clickable cursorHover" id="Btn-sound-Id" onclick="playSound('SoundButtonSound');">
+            <div data-v-1fd0ec12="" class="wrapperPath">
+                <svg id="SoundButton" data-v-1fd0ec12="" x="0px" y="0px" viewBox="0 0 92.4 11" xml:space="preserve">
+                    <path data-v-1fd0ec12="" d="M92.4,7c-1.1,0-2.1-0.1-2.7-0.7c-0.8-0.7-1.6-1.5-2.4-2.3c-1.2-1.3-4.1-1.6-5.3-0.2c-0.8,0.9-1.6,1.9-2.4,2.9c-1.2,1.6-4,1.9-5.3,0.2c-0.8-1.1-1.6-2.2-2.4-3.4c-0.6-1-1.6-1.5-2.6-1.6c-1-0.1-2,0.4-2.6,1.4c-0.8,1.3-1.6,2.6-2.4,4C63,9.4,60.2,9.7,59,7.5c-0.8-1.5-1.6-3-2.4-4.5c-1.2-2.4-4.1-2.7-5.3-0.2c-0.8,1.6-1.6,3.3-2.4,5.1c-0.6,1.3-1.7,2.1-2.7,2.1s-2.1-0.9-2.7-2.1c-0.8-1.8-1.6-3.4-2.4-5.1c-1.2-2.5-4.1-2.2-5.3,0.2C35,4.5,34.2,6,33.4,7.5c-1.2,2.2-4,1.9-5.3-0.2c-0.8-1.4-1.6-2.7-2.4-4c-0.6-1-1.6-1.5-2.6-1.4c-1,0.1-2,0.6-2.6,1.6c-0.8,1.2-1.6,2.3-2.4,3.4c-1.3,1.7-4.1,1.4-5.3-0.2c-0.8-1-1.6-2-2.4-2.9C9.2,2.4,6.3,2.8,5.1,4C4.3,4.9,3.5,5.6,2.7,6.3C2.1,6.9,1.1,7,0,7" class="" id="SoundWaveTropStyle">
+                    </path>
+                </svg>
+            </div>
+            <span data-v-1fd0ec12="" id="SpanSound">Désactiver le son</span>
+        </div>
+    </div>
+    <a id="open-button" href="helpBot/index.html"></a>
+    <section class="content">
+        <div class="containerContent">
+          <div class="row">
+            <div class="column-66">
+              <h1 class="xlarge-font"><b>The App</b></h1>
+              <h1 class="large-font" style="color:Black;"><b>Why buy it?</b></h1>
+              <p><span style="font-size:36px">Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="column-33">
+                <img src="images/Paris-EiffelTower.jpg" width="335" height="471" class="ImgContent">
+            </div>
+          </div>
+        </div>
+        <div class="containerContent" style="background-color:#f1f1f1">
+          <div class="row">
+            <div class="column-33">
+              <img src="images/Paris-EiffelTower.jpg" alt="App" width="335" height="471" class="ImgContent">
+            </div>
+            <div class="column-66">
+              <h1 class="xlarge-font"><b>Clarity</b></h1>
+              <h1 class="large-font" style="color:Black;"><b>Pixels, who?</b></h1>
+              <p><span style="font-size:24px">A revolution in resolution.</span> Sharp and clear photos with the world's best photo engine, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+          </div>
+        </div>
+        <div class="containerContent">
+          <div class="row">
+            <div class="column-66">
+              <img src="images/Paris-EiffelTower.jpg" width="471" height="335" class="ImgContent">
+            </div>
+            <div class="column-33">
+              <div class = "BoxText">
+                  <h1 class="large-font"><b>Clarity</b></h1>
+                  <p><span style="font-size:20px">A revolution in resolution.</span> Sharp and clear photos with the world's best photo engine, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="containerContent" style="background-color:#f1f1f1">
+          <div class="row">
+            <div class="column-33">    
+                <div class = "BoxTextLeft">
+                    <h1 class="large-font"><b>Clarity</b></h1>
+                  <p><span style="font-size:20px">A revolution in resolution.</span> Sharp and clear photos with the world's best photo engine, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p> 
+                </div>         
+            </div>
+            <div class="column-66">
+              <img src="images/Paris-EiffelTower.jpg" width="471" height="335" class="ImgContent rightImg">  
+            </div>
+          </div>
+        </div>
+    </section>
+<script src="scripts/script.js" type="text/javascript"></script>
+</body>
+</html>

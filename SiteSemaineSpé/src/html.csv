@@ -1,0 +1,36 @@
+1;2;nom id/c;tabulation;fermeture-di;fermeture-in;C'est le text entre les balises;commentaire ?;commentaire;Mettre 1 ;!DOCTYPE
+p;0;0;0;0;0;;1;Balise ouvrante;1;
+p;0;0;0;0;1;;1;Balise fermante;1;
+img;src;monImage.png;0;0;0;;1;Balise autofermante;1;
+;;;;;;;;;;
+!DOCTYPE;0;0;0;0;0;;1;Il sert a exprimer le type du document;1;1
+html;0;0;0;1;0;;1;A mettre au debut et a la fin du document;1;
+head;0;0;0;1;0;;1;Pour toutes les metadonnees (titre de la page,liens,...);1;
+body;0;0;0;1;0;;1;Pour toutes les informations visibles sur votre site web;1;
+;;;;;;;;;;
+p;0;0;0;1;0;Votre Paragraphe;0;;1;
+;;;;;;;;;;
+h1;;;;;;;;;1;
+h2;;;;;;;;;1;
+h3;;;;;;;;;1;
+h4;;;;;;;;;1;
+h5;;;;;;;;;1;
+h6;;;;;;;;;1;
+;;;;;;;;;;
+0;;;;;;;1;Ceci est un commentaire;1;
+;;;;;;;;;;
+br;0;0;0;0;0;;1;ou;1;
+br;0;0;0;0;1;;0;;1;
+;;;;;;;;;;
+em;0;0;0;1;0;Texte en italique;0;;1;
+strong;0;0;0;1;0;Texte en gras;0;;1;
+sup;0;0;0;1;0;Mettre un text en exposant;0;;1;
+;;;;;;;;;;
+a;href;http://google,com;0;1;0;Google;0;;1;
+;;;;;;;;;;
+header;0;0;0;0;0;;1;Indique une en-tete de la page;1;
+nav;0;0;0;0;0;;1;indique un element de navigation;1;
+article;0;0;0;0;0;;1;represente une portion de la page;1;
+footer;0;0;0;0;0;;1;indique l'element du pied de page;1;
+;;;;;;;;;;
+video;controls src;mavideo.ogv;;;;;;;1;

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HelpBot !</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="stylesBot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script type="text/javascript">
+    	$( document ).ready(function() {
+    	});
+    </script>
+</head>
+<body>
+	<div class="row">
+	  <div class="column left">
+	  	<section id="chatBot">
+	        <div class="container">
+	            <img src="../images/Spectre.jpg" alt="Avatar" style="width:100%;">
+	            <p>Hello. How can i help you ?</p>
+	            <span class="time-right"></span>
+	        </div>
+	     </section>
+	     <div id="inputUser">
+	     	<input id="input"type="text" name="" placeholder="Écrivez votre message ...">
+	     </div>
+	  </div>
+	  <div class="column right">
+	  	<div class="descRobot">
+	  		<div id="open-button">
+	  			<p>HelpBot</p>
+	  			<div class="topnav">
+				  <a href="../index.html" class="active">Home</a>
+				  <div id="myLinks">
+				    <a href="#news">News</a>
+				    <a href="#contact">Fonctionnalities</a>
+				    <a href="#about">About HelpBot</a>
+				  </div>
+				  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				    <i class="fa fa-bars"></i>
+				  </a>
+				</div>
+	  		</div>
+	  	</div>
+	  </div>
+	</div>
+	<script type="text/javascript" src="../scripts/robot.js"></script>
+	<script>
+		function myFunction() {
+		  var x = document.getElementById("myLinks");
+		  if (x.style.display === "block") {
+		    x.style.display = "none";
+		  } else {
+		    x.style.display = "block";
+		  }
+		}
+	</script>
+</body>
+</html>
